@@ -25,25 +25,24 @@
 
 /*
  * Visual system — Amara Portfolio
- * Palette définie dans AGENTS.md. Seuls les tokens ci-dessous sont autorisés.
- * Aucune couleur arbitraire. Pas de gradient. Pas de glassmorphism.
+ * Identité "dark navy + cyan" définie dans AGENTS.md / brief de refonte.
+ * Palette stricte : background, surface, surface secondary, line, primary,
+ * primary deep, text, muted, subtle. Aucune couleur arbitraire, pas de
+ * gradient, pas de glassmorphism.
  */
 
 :root {
   /* --- Design tokens --- */
-  --canvas: #f7f5f1;
-  --surface: #ffffff;
-  --surface-muted: #efece6;
-  --ink: #1c1b19;
-  --body: #4a4844;
-  --muted-ink: #6f6c66; /* "Muted" — texte atténué */
-  --line: #ddd8d0;
-  --line-strong: #c4beb4;
-  --ember: #b65a2a;
-  --ember-soft: #f3e4d8;
-  --ember-deep: #8c431d;
-  --canopy: #3f5a4a;
-  --canopy-soft: #e4ebe6;
+  --canvas: #10113f; /* background principal */
+  --surface: #17194a; /* surface primaire */
+  --surface-muted: #1d2054; /* surface secondaire */
+  --ink: #f5f7ff; /* texte principal */
+  --body: #a8b0c7; /* texte atténué (muted) */
+  --muted-ink: #747d9c; /* texte discret (subtle) */
+  --line: #292c5c; /* bordures */
+  --line-strong: #343a6e; /* bordures accentuées (dérivé de la palette) */
+  --primary: #42c6f0; /* cyan signature */
+  --primary-deep: #2389d7; /* cyan profond */
 
   /* --- Typography --- */
   --font-sans: 'Geist Variable', 'Geist', system-ui, sans-serif;
@@ -65,35 +64,34 @@
   --card-foreground: var(--ink);
   --popover: var(--surface);
   --popover-foreground: var(--ink);
-  --primary: var(--ink);
-  --primary-foreground: var(--canvas);
+  --primary-foreground: #0a0c22; /* navy profond sur cyan */
   --secondary: var(--surface-muted);
   --secondary-foreground: var(--ink);
-  --muted: var(--surface-muted);
-  --muted-foreground: var(--muted-ink);
+  --muted: var(--surface);
+  --muted-foreground: var(--body);
   --accent: var(--surface-muted);
   --accent-foreground: var(--ink);
-  --destructive: #c0403c;
+  --destructive: #e2574c;
   --border: var(--line);
   --input: var(--line);
-  --ring: var(--ember);
+  --ring: var(--primary);
 
-  --chart-1: var(--ember);
-  --chart-2: var(--canopy);
-  --chart-3: var(--ember-deep);
-  --chart-4: var(--muted-ink);
+  --chart-1: var(--primary);
+  --chart-2: var(--primary-deep);
+  --chart-3: var(--surface-muted);
+  --chart-4: var(--body);
   --chart-5: var(--line-strong);
 
   --sidebar: var(--surface);
   --sidebar-foreground: var(--ink);
-  --sidebar-primary: var(--ember);
-  --sidebar-primary-foreground: var(--surface);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: #0a0c22;
   --sidebar-accent: var(--surface-muted);
   --sidebar-accent-foreground: var(--ink);
   --sidebar-border: var(--line);
-  --sidebar-ring: var(--ember);
+  --sidebar-ring: var(--primary);
 
-  color-scheme: light;
+  color-scheme: dark;
   background: var(--background);
   color: var(--body);
   font-family: var(--font-sans);
@@ -113,15 +111,11 @@
   --color-surface-muted: var(--surface-muted);
   --color-ink: var(--ink);
   --color-body: var(--body);
-  --color-muted: var(--surface-muted);
-  --color-muted-foreground: var(--muted-ink);
+  --color-subtle: var(--muted-ink);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
-  --color-ember: var(--ember);
-  --color-ember-soft: var(--ember-soft);
-  --color-ember-deep: var(--ember-deep);
-  --color-canopy: var(--canopy);
-  --color-canopy-soft: var(--canopy-soft);
+  --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -129,12 +123,13 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
@@ -168,6 +163,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html.dark {
+    color-scheme: dark;
+  }
   body {
     @apply bg-background text-foreground;
     margin: 0;
@@ -186,8 +184,13 @@
     line-height: 1.15;
   }
   ::selection {
-    background: var(--ember-soft);
-    color: var(--ink);
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 
@@ -224,4 +227,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+}
+
+/* --- Motif technique décoratif (grille bleue) --- */
+.grid-overlay {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 75%);
 }

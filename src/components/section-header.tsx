@@ -31,12 +31,12 @@ export function SectionHeader({
       )}
     >
       {index ? (
-        <p className="mb-3 font-mono text-xs font-medium tracking-[0.18em] text-muted-foreground">
+        <p className="mb-3 font-mono text-xs font-medium tracking-[0.18em] text-primary-deep">
           {index}
         </p>
       ) : null}
       {eyebrow ? (
-        <p className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+        <p className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.18em] text-primary">
           {eyebrow}
         </p>
       ) : null}

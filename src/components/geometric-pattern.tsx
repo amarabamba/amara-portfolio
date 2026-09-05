@@ -32,11 +32,11 @@ export function GeometricPattern({ className }: GeometricPatternProps) {
           />
           <path
             d="M32 20 L44 32 L32 44 L20 32 Z"
-            fill="var(--surface)"
+            fill="none"
             stroke="var(--line-strong)"
             strokeWidth="1"
           />
-          <circle cx="32" cy="32" r="3" fill="var(--ember-soft)" />
+          <circle cx="32" cy="32" r="3" fill="var(--primary)" />
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#amara-geometric)" />

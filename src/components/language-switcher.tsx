@@ -3,7 +3,7 @@ import { useI18n } from '@/i18n/context'
 import { languages } from '@/i18n/translations'
 
 const BUTTON =
-  'inline-flex min-h-10 min-w-11 items-center justify-center px-2.5 text-sm font-medium uppercase tracking-[0.14em] transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember'
+  'inline-flex min-h-10 min-w-11 items-center justify-center px-2.5 text-sm font-medium uppercase tracking-[0.14em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
 
 export function LanguageSwitcher() {
   const { lang, setLang, t } = useI18n()
@@ -12,7 +12,7 @@ export function LanguageSwitcher() {
     <div
       role="group"
       aria-label={t.ui.languageSwitcher.label}
-      className="flex items-center overflow-hidden rounded-control border border-line"
+      className="flex items-center overflow-hidden rounded-control border border-line bg-surface/60"
     >
       {languages.map((code) => {
         const active = lang === code
@@ -26,8 +26,8 @@ export function LanguageSwitcher() {
             className={cn(
               BUTTON,
               active
-                ? 'bg-surface-muted text-ink'
-                : 'text-muted-foreground',
+                ? 'bg-primary text-primary-foreground'
+                : 'text-body hover:text-ink',
             )}
           >
             {code.toUpperCase()}
