@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 type SectionHeaderProps = {
+  index?: string
   eyebrow?: string
   title: string
   description?: ReactNode
@@ -10,9 +11,11 @@ type SectionHeaderProps = {
 }
 
 /**
- * En-tête de section : libellé technique (mono), titre et description.
+ * En-tête de section : index (fiche technique), libellé mono, titre et
+ * description.
  */
 export function SectionHeader({
+  index,
   eyebrow,
   title,
   description,
@@ -27,6 +30,11 @@ export function SectionHeader({
         className,
       )}
     >
+      {index ? (
+        <p className="mb-3 font-mono text-xs font-medium tracking-[0.18em] text-muted-foreground">
+          {index}
+        </p>
+      ) : null}
       {eyebrow ? (
         <p className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
           {eyebrow}
