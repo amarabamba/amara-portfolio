@@ -1,28 +1,20 @@
 export const work = {
-  index: '03',
+  index: '01',
   projects: [
     {
       slug: 'gstar',
       name: 'GSTAR',
-      stack: [
-        'Java',
-        'TypeScript',
-        'JavaScript',
-        'Angular',
-        'Groovy',
-        'Docker',
-        'GitLab CI/CD',
-      ],
+      featured: true,
     },
     {
       slug: 'dafexpert',
       name: 'DAFEXPERT',
-      stack: ['React', 'Webpack'],
+      featured: false,
     },
     {
       slug: 'ecollect',
       name: 'E-COLLECT',
-      stack: [],
+      featured: false,
     },
   ],
 } as const

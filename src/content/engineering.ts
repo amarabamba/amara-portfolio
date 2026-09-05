@@ -1,0 +1,66 @@
+export const engineering = {
+  index: '02',
+  pillars: [
+    {
+      id: '01',
+      slug: 'enterprise',
+      tags: ['Java', 'Angular', 'Odoo', 'PostgreSQL'],
+    },
+    {
+      id: '02',
+      slug: 'fullstack',
+      tags: ['React', 'Next.js', 'NestJS', 'TypeScript'],
+    },
+    {
+      id: '03',
+      slug: 'architecture',
+      tags: [
+        'Symfony',
+        'Microservices',
+        'REST',
+        'GraphQL',
+        'MongoDB',
+        'MySQL',
+      ],
+    },
+    {
+      id: '04',
+      slug: 'delivery',
+      tags: [
+        'Docker',
+        'AWS EC2 & S3',
+        'GitLab CI/CD',
+        'Jenkins',
+        'ActiveMQ',
+        'App security',
+      ],
+    },
+  ],
+  stack: [
+    'JavaScript',
+    'TypeScript',
+    'Java',
+    'Angular',
+    'React',
+    'Next.js',
+    'Odoo',
+    'NestJS',
+    'Symfony',
+    'REST',
+    'GraphQL',
+    'Microservices',
+    'PostgreSQL',
+    'MySQL',
+    'MongoDB',
+    'Docker',
+    'GitLab CI/CD',
+    'Jenkins',
+    'Git',
+    'AWS EC2 / S3',
+    'ActiveMQ',
+    'Application security',
+    'Software architecture',
+  ],
+} as const
+
+export type EngineeringSlug = (typeof engineering.pillars)[number]['slug']
