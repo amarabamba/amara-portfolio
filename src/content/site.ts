@@ -1,21 +1,9 @@
-export const headerNav = [
-  { label: 'Work', href: '#work' },
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Contact', href: '#contact' },
-] as const
-
-export const resumeHref = '/CV_Bamba_Amara_Full.pdf'
-
-export const footerNav = [
-  { label: 'Work', href: '#work' },
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Contact', href: '#contact' },
-] as const
-
-export const heroCapabilities = [
-  'Enterprise software',
-  'Public-sector systems',
-  'Citizen management',
-  'Appointment & scheduling',
-  'Complex workflows',
-] as const
+export const site = {
+  name: 'Amara Bamba',
+  nav: [
+    { id: 'work', href: '#work' },
+    { id: 'capabilities', href: '#capabilities' },
+    { id: 'contact', href: '#contact' },
+  ],
+  resumeHref: '/CV_Bamba_Amara_Full.pdf',
+} as const

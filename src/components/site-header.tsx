@@ -3,7 +3,9 @@ import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/container'
 import { buttonVariants } from '@/components/ui/button'
-import { headerNav, resumeHref } from '@/content/site'
+import { LanguageSwitcher } from '@/components/language-switcher'
+import { useI18n } from '@/i18n/context'
+import { site } from '@/content/site'
 
 const NAV_LINK =
   'inline-flex min-h-10 items-center px-3 text-sm text-muted-foreground transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember'
@@ -12,6 +14,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const { t } = useI18n()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4)
@@ -44,20 +47,22 @@ export function SiteHeader() {
           href="#top"
           className="inline-flex min-h-10 items-center text-base font-semibold tracking-tight text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember"
         >
-          Amara Bamba
+          {site.name}
         </a>
 
-        <nav aria-label="Primary navigation" className="hidden items-center md:flex">
-          {headerNav.map((item) => (
+        <nav aria-label={t.ui.header.primaryNav} className="hidden items-center md:flex">
+          {site.nav.map((item) => (
             <a key={item.href} href={item.href} className={NAV_LINK}>
-              {item.label}
+              {t.ui.nav[item.id]}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+
           <a
-            href={resumeHref}
+            href={site.resumeHref}
             target="_blank"
             rel="noreferrer"
             className={cn(
@@ -65,7 +70,7 @@ export function SiteHeader() {
               'hidden min-h-10 px-4 sm:inline-flex',
             )}
           >
-            Resume
+            {t.ui.header.resume}
           </a>
 
           <button
@@ -78,27 +83,27 @@ export function SiteHeader() {
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
             <span className="sr-only">
-              {open ? 'Close menu' : 'Open menu'}
+              {open ? t.ui.header.closeMenu : t.ui.header.openMenu}
             </span>
           </button>
         </div>
       </Container>
 
       {open ? (
-        <nav id="site-nav" aria-label="Mobile navigation" className="border-t border-line bg-surface md:hidden">
+        <nav id="site-nav" aria-label={t.ui.header.mobileNav} className="border-t border-line bg-surface md:hidden">
           <Container className="flex flex-col pb-6 pt-2">
-            {headerNav.map((item) => (
+            {site.nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="inline-flex min-h-11 items-center border-b border-line text-sm text-body last:border-b-0 hover:text-ink"
               >
-                {item.label}
+                {t.ui.nav[item.id]}
               </a>
             ))}
             <a
-              href={resumeHref}
+              href={site.resumeHref}
               target="_blank"
               rel="noreferrer"
               className={cn(
@@ -106,7 +111,7 @@ export function SiteHeader() {
                 'mt-4 min-h-11 self-start px-4',
               )}
             >
-              Resume
+              {t.ui.header.resume}
             </a>
           </Container>
         </nav>

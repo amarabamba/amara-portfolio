@@ -1,27 +1,30 @@
 import { Container } from '@/components/container'
-import { footerNav } from '@/content/site'
+import { useI18n } from '@/i18n/context'
+import { site } from '@/content/site'
 
 export function Footer() {
+  const { t } = useI18n()
+
   return (
     <footer className="border-t border-line">
       <Container className="flex flex-col gap-8 py-12">
         <div className="flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
-            <p className="text-base font-semibold text-ink">Amara Bamba</p>
+            <p className="text-base font-semibold text-ink">{site.name}</p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Software Engineer
+              {t.ui.footer.role}
             </p>
           </div>
 
-          <nav aria-label="Footer">
+          <nav aria-label={t.ui.footer.nav}>
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              {footerNav.map((item) => (
+              {site.nav.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
                     className="text-sm text-muted-foreground underline-offset-4 hover:text-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember"
                   >
-                    {item.label}
+                    {t.ui.nav[item.id]}
                   </a>
                 </li>
               ))}
@@ -30,7 +33,7 @@ export function Footer() {
         </div>
 
         <p className="font-mono text-xs text-muted-foreground">
-          © 2026 Amara Bamba
+          © 2026 {site.name}
         </p>
       </Container>
     </footer>

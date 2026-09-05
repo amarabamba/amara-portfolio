@@ -2,9 +2,12 @@ import { m } from 'motion/react'
 import { Container } from '@/components/container'
 import { GeometricPattern } from '@/components/geometric-pattern'
 import { fadeUp, stagger } from '@/lib/motion'
-import { heroCapabilities } from '@/content/site'
+import { useI18n } from '@/i18n/context'
 
 export function Hero() {
+  const { t } = useI18n()
+  const { hero } = t.content
+
   return (
     <section id="top" className="relative scroll-mt-16 overflow-hidden">
       <Container className="grid grid-cols-1 gap-16 py-16 md:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-24 lg:py-32">
@@ -18,24 +21,21 @@ export function Hero() {
             variants={fadeUp}
             className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground"
           >
-            Software Engineer
+            {hero.eyebrow}
           </m.p>
 
           <m.h1
             variants={fadeUp}
             className="mt-6 text-4xl font-medium leading-[1.1] tracking-[-0.03em] text-ink lg:text-5xl"
           >
-            Software Engineer building reliable software for complex business
-            processes.
+            {hero.title}
           </m.h1>
 
           <m.p
             variants={fadeUp}
             className="mt-8 max-w-xl text-base text-body sm:text-lg"
           >
-            I build reliable software for complex business processes, with a
-            focus on enterprise applications, public-sector systems, citizen
-            management and scheduling.
+            {hero.description}
           </m.p>
         </m.div>
 
@@ -54,12 +54,12 @@ export function Hero() {
 
           <div className="relative rounded-card border border-line bg-surface p-6 sm:p-8">
             <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Capabilities
+              {t.ui.hero.capabilities}
             </p>
             <ul className="mt-4">
-              {heroCapabilities.map((capability, index) => (
+              {hero.capabilities.map((capability, index) => (
                 <m.li
-                  key={capability}
+                  key={index}
                   variants={fadeUp}
                   className="flex items-baseline gap-4 border-b border-line py-4 last:border-b-0 last:pb-0"
                 >
