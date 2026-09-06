@@ -119,7 +119,7 @@ const en: Dictionary = {
   meta: {
     title: 'Amara Bamba — Software Engineer',
     description:
-      'Full Stack Software Engineer with more than 9 years of experience building web applications, enterprise software and solutions for complex business processes.',
+      'Full-stack Software Engineer with 9+ years building and maintaining web applications for enterprises and public administrations — SaaS products and public-sector platforms.',
   },
   ui: {
     nav: {
@@ -156,10 +156,10 @@ const en: Dictionary = {
   content: {
     hero: {
       eyebrow: 'Software Engineer',
-      titleA: 'I build dependable software for ',
-      titleAccent: 'complex enterprise & public-sector systems.',
+      titleA: 'I build and maintain ',
+      titleAccent: 'complex business software.',
       description:
-        'Full-stack Software Engineer with 9+ years turning complex processes into simple, maintainable systems — citizen services, administrative workflows, scheduling and SaaS platforms.',
+        'Full-stack Software Engineer with 9+ years on enterprise SaaS and public-sector platforms — citizen services, administrative processes, scheduling and more.',
       meta: 'Abidjan, Côte d’Ivoire · Enterprise · Public sector · SaaS',
       ctaWork: 'Selected work',
       ctaContact: 'Get in touch',
@@ -174,7 +174,7 @@ const en: Dictionary = {
     work: {
       eyebrow: 'Selected Work',
       title: 'Real systems, complex constraints',
-      lead: 'A closer look at the platforms behind the numbers — built around demanding business rules, integrations and real-world operating conditions.',
+      lead: 'Three projects that show how I work — around demanding business rules, integrations and real operating conditions.',
       contextLabel: 'Context',
       metricsLabel: 'Key metrics',
       focusLabel: 'Focus',
@@ -185,11 +185,8 @@ const en: Dictionary = {
           company: 'ProActive.Swiss — Growing Consulting',
           period: '2023 · Present',
           description:
-            'Platform running the administrative processes of Swiss public administrations. I designed dynamic web interfaces and processing workflows that automate administrative procedures — cutting paper handling and raising municipal productivity — and integrated backend services, document engines and third-party synchronizations for case management, official document generation and data exchange.',
-          metrics: [
-            { value: '3,000+', label: 'daily users' },
-            { value: '300,000+', label: 'cases per year' },
-          ],
+            'Platform running the administrative processes of Swiss public administrations. I designed the dynamic web interfaces and processing workflows that automate administrative procedures — reducing paper handling and improving municipal productivity — and integrated backend services, document engines and third-party synchronizations for case management, official document generation and data exchange. I also fixed anomalies, optimized performance and accompanied version upgrades and production deployments.',
+          metrics: [],
           focus: [
             'Automated administrative workflows',
             'Official document generation',
@@ -202,11 +199,8 @@ const en: Dictionary = {
           company: 'AKILTECHNOLOGIES',
           period: '2019 · 2023',
           description:
-            'Frontend transformation of the AKILCAB suite into Dafexpert, re-architected on a microservices-based frontend while leading a team of five junior developers — with a 30% drop in production errors.',
-          metrics: [
-            { value: '30%', label: 'fewer production errors' },
-            { value: '5', label: 'junior developers led' },
-          ],
+            'Transformation of the AKILCAB suite into Dafexpert. I re-architected the frontend around microservices and ran code reviews for a team of five junior developers — cutting production errors by 30%.',
+          metrics: [],
           focus: [
             'Frontend transformation',
             'Microservices architecture',
@@ -219,7 +213,7 @@ const en: Dictionary = {
           company: 'AKILTECHNOLOGIES',
           period: '2019 · 2023',
           description:
-            'Web solution that automatically retrieves banking operations to perform bank reconciliation — with reconciliation features implemented precisely enough to guarantee exact synchronization of financial data.',
+            'Platform that automatically retrieves banking operations to reconcile accounts. I wrote the scraping script that fetches bank data without a bank API, and built reconciliation that keeps financial data exactly synchronized.',
           metrics: [],
           focus: ['Automatic bank-feed retrieval', 'Exact financial data sync'],
         },
@@ -227,7 +221,7 @@ const en: Dictionary = {
     },
     engineering: {
       eyebrow: 'Engineering',
-      title: 'How I engineer systems',
+      title: 'How I work',
       lead: 'From Java to JavaScript, from workflow engines to SaaS platforms — pragmatic engineering focused on simple, maintainable solutions that fit real business needs.',
       pillars: {
         enterprise: {
@@ -255,8 +249,8 @@ const en: Dictionary = {
     },
     experience: {
       eyebrow: 'Experience',
-      title: 'From Abidjan to Swiss public administrations',
-      lead: 'Nine years of engineering across enterprise SaaS in Côte d’Ivoire and the administrative platforms of Swiss public authorities.',
+      title: 'From 2018 to today',
+      lead: 'Nine years of engineering — enterprise SaaS for businesses and accountants in Côte d’Ivoire, then the administrative platforms of Swiss public administrations.',
       timeline: {
         proactive: {
           role: 'Full-Stack Developer',
@@ -305,10 +299,10 @@ const en: Dictionary = {
     },
     about: {
       eyebrow: 'About',
-      title: 'Simple solutions to complex problems',
+      title: 'Full-stack Software Engineer, based in Abidjan',
       paragraphs: [
-        'I’m Amara, a full-stack Software Engineer from Abidjan with more than nine years of experience building software that organizations rely on every day. My path runs from enterprise SaaS in Côte d’Ivoire to the Swiss public sector — always around the same question: how do we make complex processes feel simple and reliable?',
-        'I believe craft is a means, not an end. A system succeeds when it stays simple to maintain, safe to run and adapted to the people using it. Along the way I’ve debugged critical components, stabilized an internal framework, and mentored junior developers — because good engineering also means making the people around you better.',
+        'I’m Amara, a full-stack Software Engineer based in Abidjan. For over nine years I’ve designed and maintained web applications for enterprises and public administrations — SaaS products, citizen services and administrative platforms with complex business rules.',
+        'I aim for code that stays simple to maintain and safe to run, and for software that matches how the business actually works. Recent years brought critical-component debugging, code reviews across a team of junior developers, and frontend re-architecture around microservices.',
       ],
       educationTitle: 'Education',
       certificationsTitle: 'Certifications',
@@ -335,7 +329,7 @@ const en: Dictionary = {
     },
     contact: {
       eyebrow: 'Contact',
-      title: 'Have a complex system worth simplifying?',
+      title: 'A project, an opportunity, or a technical question?',
       lead: 'I’m based in Abidjan and work with teams building software for enterprises and public institutions.',
       emailLabel: 'Email',
       emailCaption: 'The fastest way to reach me',
@@ -392,10 +386,10 @@ const fr: Dictionary = {
   content: {
     hero: {
       eyebrow: 'Ingénieur Logiciel',
-      titleA: 'Je conçois des logiciels fiables pour ',
-      titleAccent: 'les systèmes complexes d’entreprise et du secteur public.',
+      titleA: 'Je développe et maintiens ',
+      titleAccent: 'des logiciels métier complexes.',
       description:
-        'Ingénieur logiciel full stack, plus de 9 ans d’expérience à transformer des processus complexes en systèmes simples et maintenables — services aux usagers, processus administratifs, planification et plateformes SaaS.',
+        'Ingénieur logiciel full stack avec plus de 9 ans d’expérience sur des plateformes SaaS d’entreprise et du secteur public — services aux usagers, processus administratifs, planification et plus encore.',
       meta: 'Abidjan, Côte d’Ivoire · Entreprise · Secteur public · SaaS',
       ctaWork: 'Réalisations',
       ctaContact: 'Me contacter',
@@ -410,7 +404,7 @@ const fr: Dictionary = {
     work: {
       eyebrow: 'Réalisations sélectionnées',
       title: 'Des systèmes réels, des contraintes complexes',
-      lead: 'Un regard sur les plateformes derrière les chiffres — construites autour de règles métier exigeantes, d’intégrations et de conditions d’exploitation réelles.',
+      lead: 'Trois projets pour illustrer ma façon de travailler — autour de règles métier exigeantes, d’intégrations et de conditions d’exploitation réelles.',
       contextLabel: 'Contexte',
       metricsLabel: 'Chiffres clés',
       focusLabel: 'Focus',
@@ -421,11 +415,8 @@ const fr: Dictionary = {
           company: 'ProActive.Swiss — Growing Consulting',
           period: '2023 · Aujourd’hui',
           description:
-            'La plateforme qui fait tourner les processus administratifs des administrations publiques suisses. J’ai conçu des interfaces web dynamiques et des workflows de traitement qui automatisent les procédures administratives — moins de papier, plus de productivité pour les communes — et intégré services backend, moteurs de documents et synchronisations tierces pour la gestion des dossiers, la génération de documents officiels et l’échange de données.',
-          metrics: [
-            { value: '3 000+', label: 'utilisateurs quotidiens' },
-            { value: '300 000+', label: 'dossiers par an' },
-          ],
+            'La plateforme qui fait tourner les processus administratifs des administrations publiques suisses. J’ai conçu les interfaces web dynamiques et les workflows de traitement qui automatisent les procédures administratives — moins de papier, plus de productivité pour les communes — et intégré services backend, moteurs de documents et synchronisations tierces pour la gestion des dossiers, la génération de documents officiels et l’échange de données. J’ai aussi corrigé des anomalies, optimisé les performances et accompagné les montées de version et les déploiements.',
+          metrics: [],
           focus: [
             'Processus administratifs automatisés',
             'Génération de documents officiels',
@@ -438,11 +429,8 @@ const fr: Dictionary = {
           company: 'AKILTECHNOLOGIES',
           period: '2019 · 2023',
           description:
-            'Transformation du frontend de la suite AKILCAB en Dafexpert, réarchitecturée sur un frontend en microservices tout en encadrant une équipe de cinq développeurs juniors — avec une réduction de 30 % des erreurs de production.',
-          metrics: [
-            { value: '30 %', label: 'd’erreurs de production en moins' },
-            { value: '5', label: 'développeurs juniors encadrés' },
-          ],
+            'Transformation de la suite AKILCAB sous le nom de Dafexpert : frontend réarchitecturé autour de microservices, avec revues de code d’une équipe de cinq développeurs juniors — et 30 % d’erreurs de production en moins.',
+          metrics: [],
           focus: [
             'Transformation du frontend',
             'Architecture en microservices',
@@ -455,7 +443,7 @@ const fr: Dictionary = {
           company: 'AKILTECHNOLOGIES',
           period: '2019 · 2023',
           description:
-            'Solution web qui récupère automatiquement les opérations bancaires pour réaliser le rapprochement bancaire — avec des fonctionnalités de rapprochement implémentées avec précision, garantissant la synchronisation exacte des données financières.',
+            'Plateforme qui récupère automatiquement les opérations bancaires pour réaliser le rapprochement. J’ai écrit le script de scraping qui collecte les flux bancaires sans passer par les APIs, et construit un rapprochement qui garantit la synchronisation exacte des données financières.',
           metrics: [],
           focus: ['Récupération automatique des flux bancaires', 'Synchronisation financière exacte'],
         },
@@ -463,7 +451,7 @@ const fr: Dictionary = {
     },
     engineering: {
       eyebrow: 'Ingénierie',
-      title: 'Comment j’ingénierie les systèmes',
+      title: 'Comment je travaille',
       lead: 'De Java à JavaScript, des moteurs de workflow aux plateformes SaaS — une ingénierie pragmatique centrée sur des solutions simples, maintenables et adaptées aux besoins réels du métier.',
       pillars: {
         enterprise: {
@@ -491,8 +479,8 @@ const fr: Dictionary = {
     },
     experience: {
       eyebrow: 'Parcours',
-      title: 'D’Abidjan aux administrations publiques suisses',
-      lead: 'Neuf ans d’ingénierie entre les SaaS d’entreprise en Côte d’Ivoire et les plateformes administratives du secteur public suisse.',
+      title: 'De 2018 à aujourd’hui',
+      lead: 'Neuf ans de développement : d’abord des SaaS pour les entreprises et les experts-comptables en Côte d’Ivoire, puis les plateformes administratives du secteur public suisse.',
       timeline: {
         proactive: {
           role: 'Développeur Full-Stack',
@@ -541,10 +529,10 @@ const fr: Dictionary = {
     },
     about: {
       eyebrow: 'À propos',
-      title: 'Des solutions simples aux problèmes complexes',
+      title: 'Ingénieur logiciel full stack, basé à Abidjan',
       paragraphs: [
-        'Je suis Amara, ingénieur logiciel full stack basé à Abidjan, avec plus de neuf ans d’expérience à concevoir des logiciels que les organisations utilisent réellement chaque jour. Mon parcours va des SaaS d’entreprise en Côte d’Ivoire au secteur public suisse — toujours autour d’une même question : comment rendre simples et fiables des processus complexes ?',
-        'Je considère la technique comme un moyen, pas une fin. Un système réussit quand il reste simple à maintenir, sûr à exploiter et adapté aux personnes qui l’utilisent. J’ai débogué des composants critiques, stabilisé un framework interne et encadré des développeurs juniors — car le bon génie logiciel, c’est aussi faire progresser les personnes autour de soi.',
+        'Je suis Amara, ingénieur logiciel full stack basé à Abidjan. Depuis plus de neuf ans, je conçois et je maintiens des applications web pour les entreprises et les administrations publiques — produits SaaS, services aux usagers et plateformes administratives aux règles métier complexes.',
+        'Je vise du code simple à maintenir et sûr à exploiter, et des logiciels réellement adaptés au fonctionnement du métier. Ces dernières années : débogage de composants critiques, revues de code d’une équipe de développeurs juniors et réarchitecture de frontends autour de microservices.',
       ],
       educationTitle: 'Formation',
       certificationsTitle: 'Certifications',
@@ -571,7 +559,7 @@ const fr: Dictionary = {
     },
     contact: {
       eyebrow: 'Contact',
-      title: 'Un système complexe qui mérite d’être simplifié ?',
+      title: 'Un projet, une opportunité ou une question technique ?',
       lead: 'Je suis basé à Abidjan et je travaille avec des équipes qui construisent des logiciels pour les entreprises et les institutions publiques.',
       emailLabel: 'Email',
       emailCaption: 'Le plus rapide pour me joindre',
