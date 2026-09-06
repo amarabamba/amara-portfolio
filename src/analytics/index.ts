@@ -1,4 +1,3 @@
-import { inject } from '@vercel/analytics'
 import { injectSpeedInsights } from '@vercel/speed-insights'
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID as
@@ -53,7 +52,6 @@ export function initAnalytics() {
   if (initialized) return
   initialized = true
 
-  inject()
   injectSpeedInsights()
   loadGoogleAnalytics()
 }

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { LazyMotion, MotionConfig, domAnimation } from 'motion/react'
 import { initAnalytics } from '@/analytics'
 import { I18nProvider } from '@/i18n/i18n'
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <I18nProvider>
+      <Analytics />
       <LazyMotion features={domAnimation} strict>
         <MotionConfig reducedMotion="user">
           <SiteHeader />
