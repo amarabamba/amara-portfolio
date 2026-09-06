@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:load:smoke": "k6 run tests/load/smoke.js",
+    "test:load": "k6 run tests/load/load.js",
+    "test:load:stress": "k6 run tests/load/stress.js",
+    "test:load:spike": "k6 run tests/load/spike.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
