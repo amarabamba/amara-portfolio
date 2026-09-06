@@ -1,4 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
+import { track } from '@/analytics'
 import { I18nContext, type I18n } from './context'
 import { dictionaries, languages, type Language } from './translations'
 
@@ -45,6 +46,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         // storage indisponible : la langue n'est pas persistée, pas de crash
       }
       setLang(next)
+      track('language_change', { language: next })
     },
     t,
   }

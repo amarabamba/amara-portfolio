@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { track } from '@/analytics'
 import { cn } from '@/lib/utils'
 import { Container } from '@/components/container'
 import { Monogram } from '@/components/monogram'
@@ -76,6 +77,7 @@ export function SiteHeader() {
             href={site.resumeHref}
             target="_blank"
             rel="noreferrer"
+            onClick={() => track('cv_download')}
             className={cn(
               buttonVariants({ variant: 'secondary' }),
               'hidden min-h-10 px-4 sm:inline-flex',
@@ -121,6 +123,7 @@ export function SiteHeader() {
               href={site.resumeHref}
               target="_blank"
               rel="noreferrer"
+              onClick={() => track('cv_download')}
               className={cn(
                 buttonVariants({ variant: 'secondary' }),
                 'mt-4 min-h-11 self-start px-4',

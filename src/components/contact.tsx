@@ -1,5 +1,6 @@
 import { ArrowUpRight, FileText, Mail, MapPin } from 'lucide-react'
 import type { ComponentType } from 'react'
+import { track, type AnalyticsEvent } from '@/analytics'
 import { GithubIcon, LinkedinIcon } from '@/components/icons'
 import { m } from 'motion/react'
 import { Container } from '@/components/container'
@@ -24,6 +25,7 @@ export function Contact() {
     href?: string
     icon: ComponentType<{ className?: string }>
     external?: boolean
+    event?: AnalyticsEvent
   }> = [
     {
       key: 'email',
@@ -32,6 +34,7 @@ export function Contact() {
       value: contact.email.value,
       href: contact.email.href,
       icon: Mail,
+      event: 'contact_email_click',
     },
     {
       key: 'location',
@@ -48,6 +51,7 @@ export function Contact() {
       href: site.socials.linkedin.href,
       icon: LinkedinIcon,
       external: true,
+      event: 'linkedin_click',
     },
     {
       key: 'github',
@@ -57,6 +61,7 @@ export function Contact() {
       href: site.socials.github.href,
       icon: GithubIcon,
       external: true,
+      event: 'github_click',
     },
   ]
 
@@ -83,6 +88,8 @@ export function Contact() {
           >
             {cards.map((card) => {
               const Icon = card.icon
+              const event = card.event
+              const trackEvent = event ? () => track(event) : undefined
               const content = (
                 <>
                   <span className="grid size-10 place-items-center rounded-control border border-line bg-surface-muted/60">
@@ -114,6 +121,7 @@ export function Contact() {
                       href={card.href}
                       target={card.external ? '_blank' : undefined}
                       rel={card.external ? 'noreferrer' : undefined}
+                      onClick={trackEvent}
                       className="group relative flex h-full flex-col rounded-card border border-line bg-surface p-6 transition-colors duration-200 hover:border-primary/40 sm:p-7"
                     >
                       {content}
@@ -133,6 +141,7 @@ export function Contact() {
               href={site.resumeHref}
               target="_blank"
               rel="noreferrer"
+              onClick={() => track('cv_download')}
               className={cn(
                 buttonVariants({ variant: 'secondary', size: 'lg' }),
                 'inline-flex min-h-12 w-full gap-2 py-3 sm:w-auto sm:px-6',

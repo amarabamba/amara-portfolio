@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { LazyMotion, MotionConfig, domAnimation } from 'motion/react'
+import { initAnalytics } from '@/analytics'
 import { I18nProvider } from '@/i18n/i18n'
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
@@ -10,6 +12,10 @@ import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 
 function App() {
+  useEffect(() => {
+    initAnalytics()
+  }, [])
+
   return (
     <I18nProvider>
       <LazyMotion features={domAnimation} strict>

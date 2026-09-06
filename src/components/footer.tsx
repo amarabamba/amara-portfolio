@@ -1,4 +1,5 @@
 import { ArrowUp } from 'lucide-react'
+import { track } from '@/analytics'
 import { Container } from '@/components/container'
 import { Monogram } from '@/components/monogram'
 import { GithubIcon, LinkedinIcon } from '@/components/icons'
@@ -52,6 +53,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={t.ui.footer.socials}
+              onClick={() => track('linkedin_click')}
               className="grid size-10 place-items-center rounded-control border border-line bg-surface text-body transition-colors hover:border-primary/60 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <LinkedinIcon className="size-4" />
@@ -61,6 +63,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={t.ui.footer.socials}
+              onClick={() => track('github_click')}
               className="grid size-10 place-items-center rounded-control border border-line bg-surface text-body transition-colors hover:border-primary/60 hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <GithubIcon className="size-4" />
