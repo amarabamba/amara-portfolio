@@ -24,6 +24,10 @@ coverage
 *.tsbuildinfo
 *.tgz
 
+# Test output
+/test-results
+/playwright-report
+
 # Local files
 *.local
 .env
